@@ -1,6 +1,6 @@
 fn main() {
     let str1 = String::from("hello");
-    let test = | mut str: String | {
+    let test = move | mut str: String | {
         str.push_str(&String::from(" world"));  
         str
     };
@@ -8,4 +8,4 @@ fn main() {
     let tested = test(str1);
 
     println!("{:?}", tested);
-}
+}`
